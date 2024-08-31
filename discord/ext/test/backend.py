@@ -970,7 +970,8 @@ def add_reaction(message: discord.Message, user: typing.Union[discord.user.BaseU
         "message_id": message.id,
         "channel_id": message.channel.id,
         "user_id": user.id,
-        "emoji": emoji
+        "emoji": emoji,
+        "type": discord.enums.ReactionType.normal,
     }
     if message.guild:
         data["guild_id"] = message.guild.id
